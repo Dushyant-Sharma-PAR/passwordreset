@@ -1,5 +1,9 @@
 (function() {
   function createAltResetUI() {
+    var prompt = config.internalOptions.prompt;
+    if (prompt !== "reset-password-request") {
+      return false;
+    }
     const container = document.querySelector("form");
     if (!container) return; // fallback if page structure changes
 
